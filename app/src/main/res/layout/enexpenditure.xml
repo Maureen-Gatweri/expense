@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/etDividends"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilMoneyIn"
+        android:layout_width="396dp"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraints"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvIncome"
+            android:layout_width="162dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:drawableLeft="@drawable/income"
+            android:text="Money in
+                             kes 42500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMoneyOut"
+            android:layout_width="175dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="16dp"
+            android:drawableLeft="@drawable/expense"
+            android:text="money out
+                           kes 23700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvIncome"
+            app:layout_constraintTop_toTopOf="@+id/tvIncome" />
+
+        <TextView
+            android:id="@+id/tvBalance"
+            android:layout_width="146dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:drawableLeft="@drawable/balance"
+            android:text="Balance
+                      kees2700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIncome" />
+
+        <TextView
+            android:id="@+id/tvTransactions"
+            android:layout_width="201dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:drawableLeft="@drawable/transactions"
+            android:text="Transactions
+                       8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvBalance"
+            app:layout_constraintTop_toBottomOf="@+id/tvMoneyOut" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSalary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBalance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSalary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/expense_trx"
+                android:hint="Salary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvRent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilSalary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/income_trx"
+                android:hint="rent
+           " />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvDividents"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDivide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dividends"
+                android:drawableLeft="@drawable/expense_trx"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvElectricity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDividents">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etElectricity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Electricity"
+                android:drawableLeft="@drawable/income_trx"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvInternet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvElectricity">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etInternet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Internet"
+                android:drawableLeft="@drawable/expense_trx"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvshopping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInternet">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etShopping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Shopping"
+                android:drawableLeft="@drawable/income_trx"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
